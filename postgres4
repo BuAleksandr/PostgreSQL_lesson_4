@@ -1,0 +1,17 @@
+select name, release from public.album
+where release  = 2018;
+
+select name, duration from public.track
+where duration = (select max(duration) from public.track);
+
+select name from public.track
+where duration > 210;
+
+select name from public.collection
+where release BETWEEN 2018 AND 2020;
+
+select nickname from public.executor
+where not nickname like '%% %%'
+
+select name from track
+where name like '%%my%%'
